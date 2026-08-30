@@ -1,0 +1,41 @@
+case_id,expected_fault,ai_root_cause,exact_root_cause_match,expected_osi_layer,ai_osi_layer,osi_match,ai_confidence
+C001,No inter-VLAN routing fault is indicated; the evidence shows both VLAN networks are routed. Investigate host/server ACL or endpoint configuration next.,No inter-VLAN routing fault is indicated; both VLAN networks are directly routed. Investigate host/server ACL or endpoint configuration next.,False,Layer 3,Layer 3,True,Medium
+C002,Access port Fa0/5 is assigned to VLAN 20 instead of VLAN 10.,Fa0/5 is assigned to VLAN 20 instead of the intended VLAN 10.,False,Layer 2,Layer 2,True,High
+C003,Fa0/7 is in the default VLAN instead of VLAN 30.,Fa0/7 is assigned to the default VLAN 1 instead of VLAN 30.,False,Layer 2,Layer 2,True,Medium
+C004,VLAN 20 is not allowed on the trunk.,VLAN 20 is not allowed on trunk Gi0/1.,False,Layer 2,Layer 2,True,Medium
+C005,VLAN 40 is missing from the trunk's allowed VLAN list.,VLAN 40 is missing from the trunk's allowed VLAN list.,True,Layer 2,Layer 2,True,Medium
+C006,Default gateway is outside the PC's subnet.,The PC's default gateway 192.168.20.1 is outside its 192.168.10.0/24 subnet.,False,Layer 3,Layer 3,True,Medium
+C007,The PC has no default gateway configured.,The PC has no usable default gateway configured.,False,Layer 3,Layer 3,True,Medium
+C008,"The host uses an incorrect subnet mask (/16 instead of /24), causing incorrect local/remote decisions.",The host uses an incorrect /16 subnet mask instead of the intended /24.,False,Layer 3,Layer 3,True,High
+C009,No route to the remote network is shown.,No route to the remote network is present in the routing table.,False,Layer 3,Layer 3,True,Medium
+C010,ARP information is incomplete for the client; investigate Layer 2 connectivity/interface status before changing routing.,The client's ARP information is incomplete; investigate Layer 2 connectivity/interface status before changing routing.,False,Layer 2,Layer 2,True,Low
+C011,DHCP relay configuration is missing on the Layer 3 interface.,DHCP relay configuration is missing on the Layer 3 interface.,True,Layer 3,Layer 3,True,Medium
+C012,The DHCP pool network and gateway do not match the intended VLAN 20 subnet.,The DHCP pool is configured for 192.168.10.0/24 with gateway 192.168.10.1 instead of the intended VLAN 20 subnet 192.168.20.0/24.,False,Layer 3,Layer 3,True,Medium
+C013,The DHCP pool advertises the wrong default gateway.,The DHCP pool advertises the wrong default gateway 10.20.0.254 instead of 10.20.0.1.,False,Layer 3,Layer 3,True,Medium
+C014,The DHCP pool has no remaining available leases.,The DHCP pool has no remaining available leases.,True,Layer 3,Layer 3,True,High
+C015,The VLAN 30 interface lacks an ip helper-address when the DHCP server is remote.,The VLAN 30 interface lacks an ip helper-address for the remote DHCP server.,False,Layer 3,Layer 3,True,Medium
+C016,DNS server is not configured on the client.,No DNS server is configured on the client.,False,Layer 7,Layer 7,True,High
+C017,DNS server is reachable but is failing external resolution; investigate DNS forwarding/recursion rather than routing.,The DNS server is reachable but is failing external resolution; investigate DNS forwarding/recursion.,False,Layer 7,Layer 7,True,High
+C018,The DNS record still points to the old server address.,The DNS record for app.local still points to the old server address 10.0.0.20.,False,Layer 7,Layer 7,True,High
+C019,The affected PC has an incorrect/unreachable DNS server address.,The affected PC has an incorrect or unreachable DNS server address.,False,Layer 7,Layer 7,True,High
+C020,An ACL explicitly blocks UDP DNS traffic to the DNS server.,An ACL explicitly blocks UDP DNS traffic to the DNS server 192.168.10.53.,False,Layer 4,Layer 4,True,Medium
+C021,No route to Branch B's 192.168.2.0/24 network is present.,No route to Branch B's 192.168.2.0/24 network is present.,True,Layer 3,Layer 3,True,Medium
+C022,Configured next hop does not match the intended topology.,The configured static route uses the wrong next hop 10.0.0.6 instead of the intended 10.0.0.2.,False,Layer 3,Layer 3,True,Medium
+C023,"The next-hop interface is operationally down, preventing the expected path.","The expected path is unavailable because Gi0/1 is operationally down (up/down), preventing the next-hop path from functioning.",False,Layer 1/3,Layer 1/3,True,Medium
+C024,"The evidence alone is insufficient to identify the exact cause; check IP addressing, OSPF area, timers, and interface state.",Insufficient evidence to determine the exact OSPF adjacency fault.,False,Layer 3,Layer 3,True,Low
+C025,The router lacks a route to the remote network despite an OSPF neighbor; investigate route advertisement/network statements.,The router lacks a route to 172.16.30.0/24 despite an OSPF neighbor; investigate route advertisement/network statements.,False,Layer 3,Layer 3,True,Medium
+C026,ACL intentionally blocks guest-to-server traffic.,The ACL intentionally blocks guest-to-server traffic.,False,Layer 3/4,Layer 3/4,True,Medium
+C027,ACL blocks TCP/443 while permitting ICMP.,The ACL blocks TCP/443 to the web server while permitting ICMP.,False,Layer 4,Layer 4,True,Medium
+C028,The first ACL entry denies all traffic from the affected subnet.,The first ACL entry denies all traffic from the affected subnet 10.5.0.0/24.,False,Layer 3,Layer 3,True,Medium
+C029,"The ACL has no permit entry for the new VLAN, so implicit deny may block it.","The ACL has no permit entry for VLAN 40's 10.40.0.0/24 subnet, so implicit deny may block it.",False,Layer 3/4,Layer 3/4,True,Medium
+C030,The ACL denies SSH traffic from the management subnet.,The ACL denies SSH traffic from the management subnet 192.168.100.0/24.,False,Layer 4,Layer 4,True,Medium
+C031,No NAT configuration is shown for the inside subnet.,No NAT configuration is shown for the inside subnet.,True,Layer 3,Layer 3,True,Medium
+C032,The outside interface lacks the required ip nat outside designation.,The outside interface Gi0/1 lacks the required ip nat outside designation.,False,Layer 3,Layer 3,True,Medium
+C033,"NAT is occurring, but the router lacks a default route to the internet.","NAT is occurring, but the router lacks a default route to the internet.",True,Layer 3,Layer 3,True,Medium
+C034,NAT ACL covers only part of the inside subnet.,The NAT ACL covers only part of the inside subnet.,False,Layer 3,Layer 3,True,High
+C035,No static NAT/port-forward mapping is configured for the server.,No static NAT/port-forward mapping is configured for the server.,True,Layer 3/4,Layer 3/4,True,Medium
+C036,The evidence does not show a DHCP failure; investigate WLAN-to-VLAN mapping and DHCP relay/client association details next.,"Insufficient evidence to identify a confirmed DHCP failure; investigate WLAN-to-VLAN mapping, DHCP relay, and client association.",False,Layer 2/3,Layer 2/3,True,Medium
+C037,"ACL explicitly permits guest-to-internal traffic, violating guest isolation policy.","An ACL explicitly permits guest-to-internal traffic, violating the guest isolation policy.",False,Layer 3/4,Layer 3/4,True,Medium
+C038,"Evidence confirms the wired uplink is up but does not identify the wireless cause; investigate RF/channel utilization, authentication logs, and AP events.",Insufficient evidence to determine the wireless stability fault.,False,Layer 2,Layer 2,True,Low
+C039,The wireless controller has no route to the RADIUS server network.,The wireless controller has no route to the RADIUS server network 10.100.0.0/24.,False,Layer 3/7,Layer 3/7,True,Medium
+C040,Guest clients are routed to internal networks and no isolation ACL is present.,Guest clients are routed toward internal networks and no guest isolation ACL is present.,False,Layer 3/4,Layer 3/4,True,Medium

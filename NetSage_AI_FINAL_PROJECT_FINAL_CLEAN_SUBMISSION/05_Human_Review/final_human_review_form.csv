@@ -1,0 +1,6 @@
+case_id,ai_root_cause,ai_confidence,expected_fault,human_decision,human_correction,review_reason,evidence_supported,reviewer_name,review_date
+C003,VLAN membership issue on the affected host port,Medium,Fa0/7 is in the default VLAN instead of VLAN 30.,,,,,,
+C010,Default gateway or ARP resolution issue,Low,ARP information is incomplete for the client; investigate Layer 2 connectivity/interface status before changing routing.,,,,,,
+C024,OSPF area mismatch,Low,"The evidence alone is insufficient to identify the exact cause; check IP addressing, OSPF area, timers, and interface state.",,,,,,
+C036,DHCP failure for wireless clients,Medium,The evidence does not show a DHCP failure; investigate WLAN-to-VLAN mapping and DHCP relay/client association details next.,,,,,,
+C038,Wireless access point interface instability,Low,"Evidence confirms the wired uplink is up but does not identify the wireless cause; investigate RF/channel utilization, authentication logs, and AP events.",,,,,,

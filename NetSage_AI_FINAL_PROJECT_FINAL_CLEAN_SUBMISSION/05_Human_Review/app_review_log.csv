@@ -1,0 +1,5 @@
+case_id,ai_root_cause,expected_fault,human_decision,human_correction,reviewer_name,review_date
+C003,Fa0/7 is assigned to the default VLAN 1 instead of VLAN 30.,Fa0/7 is in the default VLAN instead of VLAN 30.,Accepted,good,shushant,2026-08-30 01:24
+C002,Fa0/5 is assigned to VLAN 20 instead of the intended VLAN 10.,Access port Fa0/5 is assigned to VLAN 20 instead of VLAN 10.,Accepted,h,shushant,2026-08-30 01:24
+C006,The PC's default gateway 192.168.20.1 is outside its 192.168.10.0/24 subnet.,Default gateway is outside the PC's subnet.,Accepted,The PC's default gateway 192.168.20.1 is outside its 192.168.10.0/24 subnet.,satyam,2026-08-30 01:25
+C015,The VLAN 30 interface lacks an ip helper-address for the remote DHCP server.,The VLAN 30 interface lacks an ip helper-address when the DHCP server is remote.,Edited,The VLAN 30 interface lacks an ip helper-address for the remote DHCP server.,shushant,2026-08-30 01:26

@@ -1,0 +1,20 @@
+flowchart TD
+    A["Troubleshooting Case<br/>Symptom + Topology + Show Outputs"]
+    B["Evidence Validator"]
+    C["Python Rule Checker<br/>IP / Mask / Gateway / Interface / VLAN / Route"]
+    D["NetSage AI<br/>Structured Prompt + LLM"]
+    E{"Human Review Gate"}
+    F["Approved Fix + Verification"]
+    G["Responsible AI / Review Log"]
+    H["Dashboard + Evaluation"]
+
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
+    E -->|Accept| F
+    E -->|Edit / Reject| G
+    F --> H
+    G --> H
+    F --> G

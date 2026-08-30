@@ -1,0 +1,26 @@
+{
+  "case": "C004",
+  "stage": "AI_INPUT_READY",
+  "ai_payload": {
+    "system_role": "NetSage AI \u2014 Cisco-style network troubleshooting assistant",
+    "case_id": "C004",
+    "symptom": "A host in VLAN 20 cannot communicate through the trunk to the router.",
+    "topology_note": "Switch-to-router link uses Gi0/1 as an 802.1Q trunk.",
+    "show_outputs": "show interfaces trunk\nPort Gi0/1\nVlans allowed on trunk: 10,30\nshow vlan brief\n20 SERVERS active",
+    "instructions": {
+      "return_fields": [
+        "root_cause",
+        "confidence",
+        "osi_layer",
+        "evidence",
+        "next_command",
+        "fix_steps"
+      ],
+      "human_review_required": true,
+      "do_not_invent_evidence": true
+    }
+  },
+  "reference_fault": "VLAN 20 is not allowed on the trunk.",
+  "human_review": "PENDING",
+  "note": "No external LLM was called by this local demonstration."
+}
