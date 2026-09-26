@@ -1,27 +1,62 @@
-# NetSage AI
+# 🌐 NetSage AI
 
-## Cisco VIP Internship — AI Track
+> **Cisco VIP Internship — AI Track**
 
-### Group Members
+An AI-assisted network troubleshooting prototype for Cisco-style lab scenarios. NetSage AI combines structured network evidence, deterministic Python checks, AI-assisted diagnosis, human review, and dashboard-based evaluation.
 
-1. **Shushant Tiwari** — 3CSE24 — 2410031232
-2. **Satyam Tiwari** — 2CSE35 — 25SCS1003005312
-3. **Nikhil Chaudhary** — 3CSE24 — 2410031491
-4. **Deepak Kumar** — 3CSE24 — 2410031228
+---
 
-NetSage AI is an AI-assisted network troubleshooting prototype for Cisco-style
-lab scenarios. It combines structured network evidence, deterministic Python
-checks, AI-assisted diagnosis, human review, and dashboard-based evaluation.
+## 👥 Team Members
 
-## Project flow
+| Name | Section | Roll Number |
+|------|---------|-------------|
+| **Shushant Tiwari** | 3CSE24 | 2410031232 |
+| **Satyam Tiwari** | 2CSE35 | 25SCS1003005312 |
 
-Case → Evidence → Rule Checker + AI → Human Review → Fix/Verification → Dashboard
+**Project Contact:** shushanttiwari2036@gmail.com
 
-## Main components
+---
 
-| Folder | Purpose |
-|---|---|
-| `00_Group_Info` | Group member and project metadata |
+## 📖 Project Overview
+
+NetSage AI is an AI-assisted network troubleshooting prototype for Cisco-style lab scenarios. It combines:
+
+- 📂 Structured network evidence
+- 🛠️ Deterministic Python checks
+- 🤖 AI-assisted diagnosis
+- 👨‍💻 Human review
+- 📊 Dashboard-based evaluation
+
+---
+
+## 🔄 Project Workflow
+
+```text
+Case
+   │
+   ▼
+Evidence
+   │
+   ▼
+Rule Checker + AI
+   │
+   ▼
+Human Review
+   │
+   ▼
+Fix / Verification
+   │
+   ▼
+Dashboard
+```
+
+---
+
+## 📁 Project Structure
+
+| 📂 Folder | 📌 Purpose |
+|-----------|------------|
+| `00_Group_Info` | Team member and project metadata |
 | `01_Dataset` | 40 troubleshooting cases |
 | `02_Prompts` | Structured AI diagnosis prompt |
 | `03_Rule_Checker` | Deterministic network checks |
@@ -31,49 +66,116 @@ Case → Evidence → Rule Checker + AI → Human Review → Fix/Verification �
 | `07_Architecture` | System architecture |
 | `08_Integration` | End-to-end integration |
 | `09_Integrated_App` | Interactive Streamlit application |
-| `10_Documentation` | Individual/group report material |
+| `10_Documentation` | Individual project report material |
 | `11_Demo` | Demonstration access information |
 
-## Run
+---
+
+# 🚀 Getting Started
+
+## Install Dependencies
 
 ```bash
 pip install streamlit pandas
 ```
 
-Integrated application:
+## Run the Integrated Application
 
 ```bash
 cd 09_Integrated_App
 streamlit run netsage_app.py
 ```
 
-Windows one-click launcher: double-click `RUN_NETSAGE_AI.bat` in the project root.
+### Windows
 
-Dashboard:
+Double-click:
+
+```text
+RUN_NETSAGE_AI.bat
+```
+
+## Launch Dashboard
 
 ```bash
 cd 06_Dashboard
 streamlit run dashboard.py
 ```
 
-Rule checker:
+## Run Rule Checker
 
 ```bash
 python 03_Rule_Checker/rule_checker.py
 ```
 
-## Group submission
+---
 
-The technical project can be shared by all four group members.
-Each student has a separate DOCX contribution summary describing their primary technical role and directly related project artifacts. The four contribution areas are treated as equal team roles. Use the exact student name/college/technology naming convention
-specified by the latest college submission form.
+# 👨‍💻 Team Contribution
 
-## Demonstration video
+This project is jointly developed by **Shushant Tiwari** and **Satyam Tiwari**.
 
-The complete 10-minute demonstration is hosted externally. The video link and QR code are included in `10_Documentation/NetSage_AI_Project_Report.docx`, and the same access link is recorded in `11_Demo/README.md`. The MP4 is not duplicated inside this ZIP.
+Both members contributed equally to the design, implementation, testing, documentation, integration, AI workflow development, Streamlit application, dashboard development, rule checker, dataset preparation, prompt engineering, architecture design, evaluation, and final submission.
 
-## Submission package
+All responsibilities previously assigned across multiple members have been consolidated between these two contributors.
 
-The integrated Streamlit application has been upgraded to a professional dark network-operations-console presentation. It includes an evidence-first command center, interactive topology explorer, terminal-style Cisco evidence panel, diagnostic flow, confidence/severity indicators, human-review gate, and reference/metadata tabs. The evaluation dashboard has also been visually upgraded.
+Use the exact student name/college/technology naming convention specified by the latest college submission form.
 
-Launch the main console from `09_Integrated_App/netsage_app.py` and the evaluation dashboard from `06_Dashboard/dashboard.py`.
+---
+
+# 🎥 Demonstration Video
+
+The complete **10-minute demonstration** is hosted externally.
+
+The video link and QR code are included in:
+
+- `10_Documentation/NetSage_AI_Project_Report.docx`
+- `11_Demo/README.md`
+
+The MP4 file is **not duplicated** inside this ZIP.
+
+---
+
+# 📦 Submission Package
+
+The integrated Streamlit application has been upgraded to a professional dark network-operations-console presentation.
+
+### Features
+
+- 🎯 Evidence-first command center
+- 🌐 Interactive topology explorer
+- 💻 Terminal-style Cisco evidence panel
+- 🔍 Diagnostic flow
+- 📈 Confidence & severity indicators
+- 👨‍💻 Human-review gate
+- 📚 Reference & metadata tabs
+
+The evaluation dashboard has also been visually upgraded.
+
+---
+
+## ▶️ Launch
+
+### Main Console
+
+```text
+09_Integrated_App/netsage_app.py
+```
+
+### Evaluation Dashboard
+
+```text
+06_Dashboard/dashboard.py
+```
+
+---
+
+<div align="center">
+
+# 🌐 NetSage AI
+
+**Cisco VIP Internship — AI Track**
+
+**Developed by Shushant Tiwari & Satyam Tiwari**
+
+*AI-Assisted Network Troubleshooting Prototype*
+
+</div>
