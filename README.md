@@ -13,8 +13,6 @@ An AI-assisted network troubleshooting prototype for Cisco-style lab scenarios. 
 | **Shushant Tiwari** | 3CSE24 | 2410031232 |
 | **Satyam Tiwari** | 2CSE35 | 25SCS1003005312 |
 
-**Project Contact:** shushanttiwari2036@gmail.com
-
 ---
 
 ## 📖 Project Overview
