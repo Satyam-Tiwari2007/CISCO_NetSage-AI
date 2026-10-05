@@ -30,8 +30,7 @@ NetSage AI is an AI-assisted network troubleshooting prototype for Cisco-style l
 
 ## 🔄 Project Workflow
 
-```text
-Case
+text Case
    │
    ▼
 Evidence
