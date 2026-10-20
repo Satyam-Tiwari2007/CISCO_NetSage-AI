@@ -12,7 +12,7 @@ C003,Two PCs on the same VLAN cannot communicate through the access switch.,Both
 show interfaces fa0/7 switchport
 Access Mode VLAN: 1",Fa0/7 is in the default VLAN instead of VLAN 30.,Layer 2,VLAN assignment,Medium
 C004,A host in VLAN 20 cannot communicate through the trunk to the router.,Switch-to-router link uses Gi0/1 as an 802.1Q trunk.,"show interfaces trunk
-Port Gi0/1
+Port Gi0/1 
 Vlans allowed on trunk: 10,30
 show vlan brief
 20 SERVERS active",VLAN 20 is not allowed on the trunk.,Layer 2,Trunk VLAN allowance,High
