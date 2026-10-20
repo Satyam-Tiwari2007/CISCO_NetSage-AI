@@ -22,7 +22,7 @@ show vlan brief
 40 GUEST active",VLAN 40 is missing from the trunk's allowed VLAN list.,Layer 2,Trunk configuration,High
 C006,PC receives an IP address but cannot reach its local router gateway.,PC is in subnet 192.168.10.0/24; gateway should be 192.168.10.1.,"ipconfig
 IPv4 Address: 192.168.10.25
-Subnet Mask: 255.255.255.0
+Subnet Mask: 255.255.255.0 
 Default Gateway: 192.168.20.1",Default gateway is outside the PC's subnet.,Layer 3,Default gateway mismatch,High
 C007,PC can ping another host on the same subnet but cannot reach remote networks.,PC is correctly addressed in 192.168.5.0/24.,"ipconfig
 IPv4: 192.168.5.20
