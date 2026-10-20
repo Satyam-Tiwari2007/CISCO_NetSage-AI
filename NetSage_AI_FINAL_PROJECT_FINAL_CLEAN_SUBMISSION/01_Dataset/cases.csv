@@ -3,7 +3,7 @@ C001,PC-A can reach devices in VLAN 10 but cannot reach the server in VLAN 20.,P
 C 192.168.10.0/24 is directly connected, GigabitEthernet0/0.10
 C 192.168.20.0/24 is directly connected, GigabitEthernet0/0.20",No inter-VLAN routing fault is indicated; the evidence shows both VLAN networks are routed. Investigate host/server ACL or endpoint configuration next.,Layer 3,Inter-VLAN routing,High
 C002,PC-A is connected to the correct switch but receives connectivity only to the wrong department's devices.,PC-A should belong to VLAN 10 (SALES); access port Fa0/5 is intended for SALES.,"show vlan brief
-10 SALES active
+10 SALES active 
 20 HR active
 show interfaces fa0/5 switchport
 Access Mode VLAN: 20",Access port Fa0/5 is assigned to VLAN 20 instead of VLAN 10.,Layer 2,VLAN assignment,Medium
